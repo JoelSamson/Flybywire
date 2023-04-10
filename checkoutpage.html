@@ -75,6 +75,7 @@
     }
   </style>
 
+
   <script type="text/javascript">
     function incrementValue() {
       var value = parseInt(document.getElementById('quantity').value, 10);
@@ -271,35 +272,57 @@
     }
     
     }
-    function totaltranprice() {
-  var total = 0;
-  var items=0;
-  var laptopQuantity = document.getElementById("msst").value;
-  var laptopPrice = 1000;
-  total += laptopQuantity * laptopPrice;
-  items += laptopQuantity*1;
-  var phoneQuantity = document.getElementById("apst").value;
-  var phonePrice = 500;
-  total += phoneQuantity * phonePrice;
-  items += phoneQuantity*1;
-  var headphonesQuantity = document.getElementById("head").value;
-  var headphonesPrice = 100;
-  total += headphonesQuantity * headphonesPrice;
-  items += headphonesQuantity*1;
-  var watchQuantity = document.getElementById("watch").value;
-  var watchPrice = 300;
-  total += watchQuantity * watchPrice;
-  items += watchQuantity*1;
-  var tvQuantity = document.getElementById("tv").value;
-  var tvPrice = 2000;
-  total += tvQuantity * tvPrice;
-  items += tvQuantity*1;
-  document.getElementById("tt").value = total;
-  document.getElementById("items").value = items;
-}
+    function parameters(){
+  
+    var laptopQuantity = document.getElementById("msst").value;
+    var laptopPrice = 1000;
+
+    var phoneQuantity = document.getElementById("apst").value;
+    var phonePrice = 500;
+
+    var headphonesQuantity = document.getElementById("head").value;
+    var headphonesPrice = 100;
+
+    var watchQuantity = document.getElementById("watch").value;
+    var watchPrice = 300;
+
+    var tvQuantity = document.getElementById("tv").value;
+    var tvPrice = 2000;
+    const data = totaltranprice(laptopQuantity,laptopPrice,phoneQuantity,phonePrice,headphonesQuantity,headphonesPrice,watchQuantity,watchPrice,tvQuantity,tvPrice);
+
+    const total = data.total;
+    const items = data.items;
+    
+    document.getElementById("tt").value = parseInt(total);
+    document.getElementById("items").value = items;
+    }
+
+    function totaltranprice(laptopQuantity,laptopPrice,phoneQuantity,phonePrice,headphonesQuantity,headphonesPrice,watchQuantity, watchPrice,tvQuantity,tvPrice) {
+    var total = 0;
+    var items=0;
+ 
+    total += laptopQuantity * laptopPrice;
+    items += laptopQuantity*1;
+ 
+    total += phoneQuantity * phonePrice;
+    items += phoneQuantity*1;
+ 
+    total += headphonesQuantity * headphonesPrice;
+    items += headphonesQuantity*1;
+ 
+    total += watchQuantity * watchPrice;
+    items += watchQuantity*1;
+ 
+    total += tvQuantity * tvPrice;
+    items += tvQuantity*1;
+
+    return {total: total, items: items}
+
+  }
+
 function trandone(){
           alert("Items Purchased Thank You");
-          closeForm() 
+          closeForm(); 
         }
   </script>
 
@@ -437,7 +460,7 @@ function trandone(){
             <input type="number" id="total" name="total" disabled>
             <br></br>
             <button type="button" class="btn btn-outline-success" id="submitBtn" value="submit"
-              onclick="stocksowned();totaltranprice();">Submit</button>
+              onclick="stocksowned();parameters();">Submit</button>
 
             <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
 
