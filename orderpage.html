@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -149,7 +150,7 @@
       if (document.getElementById('sell').checked) {
         var currentVal = parseInt(y.value)-parseInt(x.value);
         if(currentVal<0){
-          alert("Error");
+          alert("Error Cannot remove beyond added items limit.");
           closeForm() 
         }
         document.getElementById("apst").value = currentVal;
@@ -180,7 +181,7 @@
       if (document.getElementById('sell').checked) {
         var currentVal = parseInt(y.value)-parseInt(x.value);
         if(currentVal<0){
-          alert("Error");
+          alert("Error Cannot remove beyond added items limit.");
           closeForm() 
         }
         document.getElementById("msst").value = currentVal;
@@ -210,7 +211,7 @@
       if (document.getElementById('sell').checked) {
         var currentVal = parseInt(y.value)-parseInt(x.value);
         if(currentVal<0){
-          alert("Error");
+          alert("Error Cannot remove beyond added items limit.");
           closeForm() 
         }
         document.getElementById("head").value = currentVal;
@@ -240,7 +241,7 @@
       if (document.getElementById('sell').checked) {
         var currentVal = parseInt(y.value)-parseInt(x.value);
         if(currentVal<0){
-          alert("Error");
+          alert("Error Cannot remove beyond added items limit.");
           closeForm() 
         }
         document.getElementById("watch").value = currentVal;
@@ -270,7 +271,7 @@
       if (document.getElementById('sell').checked) {
         var currentVal = parseInt(y.value)-parseInt(x.value);
         if(currentVal<0){
-          alert("Error");
+          alert("Error Cannot remove beyond added items limit.");
           closeForm() 
         }
         document.getElementById("tv").value = currentVal;
@@ -485,15 +486,15 @@ function trandone(){
             <input type="text" id="ticker" name="ticker" disabled><br>
             <label for="ticker">Quantity:</label>
             <input type="text" id="stocks" name="stocks" disabled><br>
-            <label for="inv">invested $:</label>
+            <label for="inv">Money spent on this item:</label>
             <input type="number" id="inv" name="inv" disabled><br>
             <label for="cp">Current Price:</label>
             <input type="text" id="cp" name="cp" disabled><br>
-            <label for="trade_type">Trade Type:</label>
+            <label for="trade_type">Cart:</label>
             <input type="radio" id="buy" name="trade_type" value="HTML" checked>
-            <label for="buy">BUY</label>
+            <label for="buy">Add</label>
             <input type="radio" id="sell" name="trade_type" value="HTML">
-            <label for="sell">SELL</label>
+            <label for="sell">Delete</label>
             <br><br>
             <label for="quantity">Quantity: </label>
             <div class="container">
@@ -502,7 +503,7 @@ function trandone(){
                 placeholder="Enter The Quantity" min="1" onchange="calculateTotal()" />
               <input type="button" onclick="incrementValue()" class="button5" value="+" />
             </div>
-            <label for="total">Trade Value: </label>
+            <label for="total">Price of items </label>
             <input type="number" id="total" name="total" disabled>
             <br></br>
             <button type="button" class="btn btn-outline-success" id="submitBtn" value="submit"
