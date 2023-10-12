@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FLybywire</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6c4c6ea551.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="flybuy website.css">
+    <script>
+        $('#examplecontactus').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-website-logo-img.png" class="nav-bar-logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" href="#" id="nav-item-1">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#our-services-section" id="nav-item-2">Services</a>
+                    <a class="nav-link" href="#products-section" id="nav-item-3">Products</a>
+                    <a class="nav-link" href="#explore-deals-section" id="nav-item-4">Explore Deals & Offers</a>
+                    <a class="nav-link" href="#trending-blogs" id="nav-item-5">Trending Blogs</a>
+                    <a class="nav-link" href="#contact-us-section" id="nav-item-5">Contact Us</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Banner-->
+    <div class="banner-section">
+        <div id="carouselExampleIndicators" class="carousel slide ecommerce-carousel-container" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-carousel-1-sm-img.png" class="d-inline d-md-none w-100 h-100" alt="..." />
+
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-carousel-1-img.png" class="d-none d-md-inline w-100 h-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-carousel-2-sm-img.png" class="d-inline d-md-none w-100 h-100" alt="...">
+
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-carousel-2-img.png" class="d-none d-md-inline w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-carousel-3-sm-img.png" class="d-inline d-md-none w-100 h-100" alt="...">
+
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-carousel-3-img.png" class="d-none d-md-inline w-100 h-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!--Services-->
+    <div class="our-services-section pt-5 pb-5 container" id="our-services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="services-section-title">Our Services</h1>
+                    <p class="services-section-description">
+                        Most Online stores offer lower prices. Online shopping makes prices
+                        comparision simpler and quicker. It is very convenient to shop
+                        from where you are located. It saves you the cost of driving to stores,
+                        as well as parking fees.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="services-card-container mb-2 p-3 shadow text-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-services-delivery-img.png" class="services-card-img" />
+                        <h1 class="services-card-title">Fast and Free Delivery</h1>
+                        <p class="services-card-description">
+                            Fast, free, and convenient delivery choices on millions of items.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="services-card-container mb-2 p-3 shadow text-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-services-money-back-img.png" class="services-card-img" />
+                        <h1 class="services-card-title">100% Money back guarantee</h1>
+                        <p class="services-card-description">
+                            This is probably the most popular guarantee in the world.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="services-card-container mb-2 p-3 shadow text-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-services-24-by-7-support-img.png" class="services-card-img" />
+                        <h1 class="services-card-title">Online Support 24/7</h1>
+                        <p class="services-card-description">
+                            Our Online Support will provide you with many useful functions,
+                            valuable information, tips.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Products-->
+    <div class="products-section pt-5 pb-5" id="products-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 ">
+                    <h1 class="product-section-title mb-3">
+                        Our Products
+                    </h1>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="product-card-container headphones-bg-container d-flex flex-column justify-content-end p-3 mb-3">
+                        <h1 class="product-card-title">Smart Headphones</h1>
+                        <p class="product-card-description">Headphones with Deep Bass, Sound Touch...</p>
+
+                        <button type="button" class="product-card-button" data-toggle="modal" data-target="#smartHeadphonesModel">
+                            View Details
+                        </button>
+                        <div class="modal fade" id="smartHeadphonesModel" tabindex="-1" aria-labelledby="exampleheadphones" aria-hidden="true">
+                            <div class="modal-dialog mt-5">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title products-card-modal-title" id="exampleheadphones">
+                                            Sony WH-1000XM4 Noise Cancelling Headphones
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="products-card-modal-description">
+                                            Get Best Smart Headphones Prices Online in India.
+                                            Select from the best range of Headphones from most
+                                            popular brands...
+                                        </p>
+                                        <ul class="products-card-modal-list">
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Voice assistant:</span> Alexa, Google Assistant & Siri
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Smart listening:</span> Ambient sound with the best noise
+                                                cancellation
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Long battery life:</span> A single charge provides 30 hours
+                                                of playtime
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Quick charging:</span> Charge for 10 min for 5 hours
+                                                play back
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Touch controls:</span> Change the track with your fingertip
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-dark" id="buy-now" data-dismiss="modal">
+                                            Buy Now
+                                        </button>
+                                        <script type="text/javascript">
+                                            document.getElementById("buy-now").addEventListener("click", redirect);
+                                                function redirect() {
+                                                    alert("going to checkout page...");
+                                                    window.location.href = "orderpage.html";
+                                                }
+                                        </script>"
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="product-card-container laptop-bg-container d-flex flex-column justify-content-end p-3 mb-3">
+                        <h1 class="product-card-title">Laptops</h1>
+                        <p class="product-card-description">Explore vast section of laptops wide range of specifications..</p>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="product-card-button" data-toggle="modal" data-target="#laptopsModal">
+                            View Details
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="laptopsModal" tabindex="-1" aria-labelledby="examplelaptop" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title products-card-modal-title" id="examplelaptop">
+                                            Inspiron 14 5490 core i5 Laptop
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="products-card-modal-description">
+                                            Get Best Smart Headphones Prices Online in India.
+                                            Select from the best range of Headphones from most
+                                            popular brands...
+                                        </p>
+                                        <ul class="products-card-modal-list">
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Voice assistant:</span> Alexa, Google Assistant & Siri
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Smart listening:</span> Ambient sound with the best noise
+                                                cancellation
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Long battery life:</span> A single charge provides 30 hours
+                                                of playtime
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Quick charging:</span> Charge for 10 min for 5 hours
+                                                play back
+                                            </li>
+                                            <li class="products-card-modal-list-item">
+                                                <span class="products-card-modal-list-item-category">Touch controls:</span> Change the track with your fingertip
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-dark" id="buy-now1" data-dismiss="modal">BUY NOW</button>
+                                        <script type="text/javascript">
+                                            document.getElementById("buy-now1").addEventListener("click", redirect);
+                                                function redirect() {
+                                                    alert("going to checkout page...");
+                                                    window.location.href = "orderpage.html";
+                                                }
+                                        </script>"
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-row justify-content-end">
+                    <a class="products-section-link" href="">
+                        See All Offers
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Offers-->
+    <div class="offers-section pt-5 pb-5">
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="col-12 col-md-2 order-1 order-md-2">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-offers-special-img.png" class="w-100" />
+                </div>
+                <div class="col-12 col-md-6 mb-2 order-2 order-md-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-offers-appliances-img.png" class="w-100" />
+                </div>
+                <div class="col-12 col-md-4 order-3 order-md-1 text-center">
+                    <h1 class="offers-section-heading mb-2">BEST NEW YEAR SPECIAL OFFERS</h1>
+                    <p class="offers-section-description">Best time to buy. Save upto <span class="offers-section-discount-cash"> 70% cash</span></p>
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-offers-credit-card-img.png" class="offers-section-discount-image" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Trending Blogs-->
+    <div class="trending-blogs pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="trending-blog-section-title">Trending Blogs</h1>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="trending-blogs-card shadow">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-trending-blogs-1-img.png" class="w-100" />
+                        <div class="p-3">
+                            <h1 class="trending-blogs-card-sub-title">Fountain Pens</h1>
+                            <h1 class="trending-blogs-card-title">Guide to Fountain Pen Nibs</h1>
+                            <p class="trending-blogs-card-description">
+                                If you’re having trouble with a fountain pen whether it’s scratchy, too dry, or too wet...
+                            </p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#examplepennibs">
+                                Read More
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="examplepennibs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Fountain Pens Blog</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="fountain-pen-paragraph">
+                                                Fountain pens are a type of pen that use a nib, which consists of a pointed metal tip that draws ink from a reservoir and transfers it to paper. Fountain pens offer several advantages over other types of pens, including a smooth and comfortable writing experience, the ability to create a unique signature, and the ability to use a variety of inks. They also have a long lifespan and can be refilled, making them more environmentally friendly than disposable pens. However, they do require some maintenance, can be messy if not used properly, and are more expensive than other types of pens. Overall, fountain pens are a great choice for those who enjoy the writing experience and want a high-quality, long-lasting writing instrument.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="trending-blogs-card shadow" id="trending-blogs">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-trending-blogs-2-img.png" class="w-100" />
+                        <div class="p-3">
+                            <h1 class="trending-blogs-card-sub-title">Productivity</h1>
+                            <h1 class="trending-blogs-card-title">How to Craft a Better Todo List</h1>
+                            <p class="trending-blogs-card-description">
+                                A well-crafted Todo list acts as a guiding light for your day.
+                                It helps you overcome...
+                            </p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                Read More
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">A perefect TO-DO List</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>To make a perfect to-do list, start by setting clear goals and priorities for the day or week. Make a list of all the tasks that need to be done, and then prioritize them based on their importance and urgency. One effective method for prioritization is the Eisenhower Matrix, which categorizes tasks based on their urgency and importance. Once you have prioritized your tasks, break them down into smaller, more manageable steps. This will make it easier to tackle each task and stay focused throughout the day.
+                                                Next, be specific about each task and set realistic deadlines for completion. Avoid general or vague tasks, such as "work on project," and instead write specific, actionable tasks, such as "research for project for 1 hour" or "write 500 words for project by 2 pm." This will help you to stay on track and monitor your progress throughout the day. Additionally, be sure to include some breaks and downtime in your to-do list to avoid burnout and maintain your energy levels. With a well-planned and specific to-do list, you can increase your productivity and achieve your goals more effectively.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Explore Deals & Offers-->
+    <div class="explore-deals-section pt-5 pb-5" id="explore-deals-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <h1 class="explore-deals-section-title">Explore Deals & Offers</h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="explore-deals-section-card p-3 shadow">
+                        <h1 class="explore-deals-section-card-title mb-2">Upto 80% Off | Electronics & Gadgets</h1>
+                        <div class="row">
+                            <div class="d-flex flex-row">
+                                <div class="col-6 text-center">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-mamba-watch-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                    <p class="explore-deals-section-card-item-name">Smart Watch</p>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-camera-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                    <p class="explore-deals-section-card-item-name">Camera</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-6 text-center">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-sport-and-fitness-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                    <p class="explore-deals-section-card-item-name">Sports & Fitness</p>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-ear-phones-pink-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                    <p class="explore-deals-section-card-item-name">Earphones</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            See all Details
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul>
+                                            <li><strong>Discount:</strong> 10% off on all products</li>
+                                            <li><strong>Validity:</strong> Offer valid from 1st March to 31st March 2023</li>
+                                            <li><strong>Minimum Purchase:</strong> Minimum purchase of $50 required to avail discount</li>
+                                            <li><strong>Code:</strong> Use code MARCH10 at checkout to avail the offer</li>
+                                            <li><strong>Exclusions:</strong> Offer not applicable on gift cards, shipping charges, and taxes</li>
+                                            <li><strong>Cannot be combined:</strong> Offer cannot be combined with any other offer or promotion</li>
+                                            <li><strong>One-time use:</strong> Offer can be used only once per customer</li>
+                                            <li><strong>Non-transferable:</strong> Offer is non-transferable and cannot be exchanged for cash</li>
+                                            <li><strong>Management decision:</strong> Management reserves the right to modify or terminate the offer at any time without prior notice</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="explore-deals-section-card p-3 shadow">
+                        <h1 class="explore-deals-section-card-title mb-2">Festive Offers TVs & Appliances</h1>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-tv-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+
+                            </div>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#examplefestivaloffers">
+                            See all Details
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="examplefestivaloffers" tabindex="-1" role="dialog" aria-labelledby="festivaloffers" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="festivaloffers">Festival Offers on TVs & Appliances</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h2>Details:</h2>
+                                        <h3>Diwali</h3>
+                                        <ul>
+                                            <li>10% off on all LED TVs</li>
+                                            <li>Free installation and wall mount with every TV purchase</li>
+                                            <li>Up to 20% off on select home appliances</li>
+                                            <li>Exclusive exchange offers on old appliances</li>
+                                        </ul>
+                                        <h3>Sankranthi</h3>
+                                        <ul>
+                                            <li>Flat Rs. 5000 off on all 4K Ultra HD TVs</li>
+                                            <li>Free 1-year warranty extension on all products</li>
+                                            <li>Up to 25% off on select refrigerators and washing machines</li>
+                                            <li>Extra 5% discount on online orders</li>
+                                        </ul>
+                                        <h3>Christmas</h3>
+                                        <ul>
+                                            <li>Buy one get one free on select soundbars and home theatre systems</li>
+                                            <li>Free shipping and installation on all orders</li>
+                                            <li>Up to 30% off on select kitchen appliances</li>
+                                            <li>Additional cashback on select bank credit and debit cards</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="explore-deals-section-card p-3 shadow">
+                        <h1 class="explore-deals-section-card-title mb-2">Under Rs 4000 | Friendly Accessories</h1>
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-tablet-device-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                <p class="explore-deals-section-card-item-name">Tablet</p>
+                            </div>
+                            <div class="col-6 text-center">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-joy-stick-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                <p class="explore-deals-section-card-item-name">PlayStation</p>
+                            </div>
+                            <div class="col-6 text-center">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-speakers-big-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                <p class="explore-deals-section-card-item-name">Speakers</p>
+                            </div>
+                            <div class="col-6 text-center">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-explore-vr-set-img.png" class="explore-deals-section-card-img w-100 mb-3" />
+                                <p class="explore-deals-section-card-item-name">Virtual Reality Set</p>
+                            </div>
+
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#example4000">
+                            See all Details
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="example4000" tabindex="-1" role="dialog" aria-labelledby="products4000" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="products4000">Products under Rs 4000: Friendly Accessories</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h2>Details:</h2>
+                                        <ul>
+                                            <li>
+                                                <h3>Tablets</h3>
+                                                <ul>
+                                                    <li><strong>iBall Slide Gorgeo 4GL:</strong> 7-inch tablet with 4G support, 2GB RAM, and 16GB storage at Rs 3,999</li>
+                                                    <li><strong>Digiland DL721-RB:</strong> 7-inch Android tablet with 1GB RAM and 16GB storage at Rs 3,799</li>
+                                                    <li><strong>Lenovo Tab M7:</strong> 7-inch tablet with 1GB RAM and 16GB storage at Rs 3,499</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <h3>Play Station</h3>
+                                                <ul>
+                                                    <li><strong>PlayStation 2:</strong> Retro gaming console with 2 controllers and 2 games at Rs 3,499</li>
+                                                    <li><strong>PlayStation 3:</strong> Gaming console with 500GB storage and 2 games at Rs 3,999</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <h3>Speakers</h3>
+                                                <ul>
+                                                    <li><strong>boAt Stone 190:</strong> Portable Bluetooth speaker with 5W output and IPX7 rating at Rs 1,499</li>
+                                                    <li><strong>Philips BT50B:</strong> Compact wireless speaker with 2W output and built-in microphone at Rs 1,499</li>
+                                                    <li><strong>Zebronics Zeb-County:</strong> Portable speaker with 3W output and in-built FM radio at Rs 999</li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact  Us-->
+    <div class="contact-us-section pt-5 pb-5 text-center " id="contact-us-section">
+        <h1 class="contact-section-text mb-3">Let us Join Together</h1>
+        <button type="button" class="contact-section-button" data-toggle="modal" data-target="#examplecontactus" data-whatever="support@flybuy.com">CONTACT US</button>
+        <div class="modal fade" id="examplecontactus" tabindex="-1" role="dialog" aria-labelledby="contactus" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactus">New message to support@flybuy.com</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">E-mail id of sender</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="text-center text-md-left">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-website-logo-img.png" class="footer-logo" />
+                        <div class="d-flex flex-row justify-content-center justify-content-md-start">
+                            <div class="icon-container d-flex flex-column justify-content-center">
+                                <i class="fab fa-google icon"></i>
+                            </div>
+                            <div class="icon-container d-flex flex-column justify-content-center">
+                                <i class="fab fa-twitter icon"></i>
+                            </div>
+                            <div class="icon-container d-flex flex-column justify-content-center">
+                                <i class="fab fa-facebook icon"></i>
+                            </div>
+                            <div class="icon-container d-flex flex-column justify-content-center">
+                                <i class="fab fa-linkedin icon"></i>
+                            </div>
+                        </div>
+                        <p class="footer-section-text mt-3">4400 University Dr, Fairfax, VA 22030</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mt-3">
+                    <p class="footer-section-heading">Get to know us</p>
+                    <ul class="footer-list-style">
+                        <li class="footer-section-list-item">About Us</li>
+                        <li class="footer-section-list-item">Career</li>
+                        <li class="footer-section-list-item">Press Releases</li>
+                        <li class="footer-section-list-item">Gift a smile</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mt-3">
+                    <p class="footer-section-heading">Contact with us</p>
+                    <ul class="footer-list-style">
+                        <li class="footer-section-list-item">Facebook</li>
+                        <li class="footer-section-list-item">Twitter</li>
+                        <li class="footer-section-list-item">Instagram</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mt-3">
+                    <p class="footer-section-heading">Let Us Help You</p>
+                    <ul class="footer-list-style">
+                        <li class="footer-section-list-item">100% Purchase</li>
+                        <li class="footer-section-list-item">Protection</li>
+                        <li class="footer-section-list-item">Your Account</li>
+                        <li class="footer-section-list-item">Return Center</li>
+                        <li class="footer-section-list-item">Help</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="text-center">
+                <i class="fa fa-copyright icon" aria-hidden="true"></i>
+                <span class="footer-section-copyright">
+                    2023 by Joel Samson, Sai Hruthik Karumanchi and Sai Abhinav Bandaru. Created with Bootstrap.
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

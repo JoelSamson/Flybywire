@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Checkout Page</title>
+  <style>
+    .table-hover tbody tr:hover {
+      background-color: rgb(238, 214, 60);
+    }
+
+    tbody {
+      background-color: #FFF;
+      padding: 10px;
+
+    }
+    h1 {text-align: center;
+    color: #0b0b0b;}
+    body {
+      background-color: #fff !important;
+    }
+
+    table {
+      border-collapse: collapse !important;
+      width: 100% !important;
+    }
+
+    td,
+    th {
+      border: 2px solid #82b88c !important;
+      padding: 10px !important;
+      text-align: left !important;
+    }
+
+    thead {
+      background-color: #9bbe91;
+      padding: 10px;
+    }
+
+    .button5 {
+      border: none;
+      margin: 10px 10px;
+      color: white;
+      display: inline-block;
+      background-color: green;
+      font-size: 17px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .button4 {
+      border: none;
+      margin: 10px 10px;
+      display: inline-block;
+      color: white;
+      background-color: red;
+      font-size: 17px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    form {
+      width: 460px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #FFF;
+      box-shadow: 0px 0px 10px #ccc;
+      border: 2px solid #ADFF2F;
+    }
+
+    label {
+
+      color: Black;
+      width: 100px;
+      display: inline-block;
+    }
+  </style>
+
+
+  <script type="text/javascript">
+    function incrementValue() {
+      var value = parseInt(document.getElementById('quantity').value, 10);
+      value = isNaN(value) ? 0 : value;
+      if (value < 100000) {
+        value++;
+        document.getElementById('quantity').value = value;
+      }
+      calculateTotal();
+      calculateTotaltranprice();
+    }
+    function decrementValue() {
+      var value = parseInt(document.getElementById('quantity').value, 10);
+      value = isNaN(value) ? 0 : value;
+      if (value > 1) {
+        value--;
+        document.getElementById('quantity').value = value;
+      }
+      calculateTotal();
+      calculateTotaltranprice();
+    }
+    function openForm(ticker, cp) {
+      document.getElementById("account").value = "123456";
+      document.getElementById("ticker").value = String(ticker);
+      document.getElementById("cp").value = cp;
+      document.getElementById("tradeEntry").style.display = "block";
+      calculateTotal();
+      stocksowned();
+      calculateTotaltranprice();
+    }
+    function closeForm() {
+      document.getElementById("tradeEntry").style.display = "none";
+    }
+    function calculateTotal() {
+      var qty = document.getElementById("quantity").value;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("total").value = total;
+    }
+    function stocksowned() {
+      var tickerval = document.getElementById("ticker").value;
+  
+      if(tickerval=='2'){
+      var x = document.getElementById("quantity");
+      var y = document.getElementById("apst");
+  
+      
+      if (document.getElementById('sell').checked) {
+        var currentVal = parseInt(y.value)-parseInt(x.value);
+        if(currentVal<0){
+          alert("Error");
+          closeForm() 
+        }
+        document.getElementById("apst").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+      else {
+        var currentVal = parseInt(y.value)+parseInt(x.value);
+        document.getElementById("apst").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+      
+    }
+    if(tickerval=='1'){
+      var x = document.getElementById("quantity");
+      var y = document.getElementById("msst");
+      
+      
+      if (document.getElementById('sell').checked) {
+        var currentVal = parseInt(y.value)-parseInt(x.value);
+        if(currentVal<0){
+          alert("Error");
+          closeForm() 
+        }
+        document.getElementById("msst").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+      else {
+        var currentVal = parseInt(y.value)+parseInt(x.value);
+        document.getElementById("msst").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+    }
+    if(tickerval=='3'){
+      var x = document.getElementById("quantity");
+      var y = document.getElementById("head");
+      
+      
+      if (document.getElementById('sell').checked) {
+        var currentVal = parseInt(y.value)-parseInt(x.value);
+        if(currentVal<0){
+          alert("Error");
+          closeForm() 
+        }
+        document.getElementById("head").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+      else {
+        var currentVal = parseInt(y.value)+parseInt(x.value);
+        document.getElementById("head").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+    }
+    if(tickerval=='4'){
+      var x = document.getElementById("quantity");
+      var y = document.getElementById("watch");
+      
+      
+      if (document.getElementById('sell').checked) {
+        var currentVal = parseInt(y.value)-parseInt(x.value);
+        if(currentVal<0){
+          alert("Error");
+          closeForm() 
+        }
+        document.getElementById("watch").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+      else {
+        var currentVal = parseInt(y.value)+parseInt(x.value);
+        document.getElementById("watch").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+    }
+    if(tickerval=='5'){
+      var x = document.getElementById("quantity");
+      var y = document.getElementById("tv");
+      
+      
+      if (document.getElementById('sell').checked) {
+        var currentVal = parseInt(y.value)-parseInt(x.value);
+        if(currentVal<0){
+          alert("Error");
+          closeForm() 
+        }
+        document.getElementById("tv").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+      else {
+        var currentVal = parseInt(y.value)+parseInt(x.value);
+        document.getElementById("tv").value = currentVal;
+        var defaultVal = currentVal;
+        document.getElementById("stocks").value = currentVal;
+        var qty =currentVal;
+      var cp = document.getElementById("cp").value;
+      var total = qty * cp;
+      document.getElementById("inv").value = total;
+      }
+      totaltranprice();
+    }
+    
+    }
+    function parameters(){
+  
+    var laptopQuantity = document.getElementById("msst").value;
+    var laptopPrice = 1000;
+
+    var phoneQuantity = document.getElementById("apst").value;
+    var phonePrice = 500;
+
+    var headphonesQuantity = document.getElementById("head").value;
+    var headphonesPrice = 100;
+
+    var watchQuantity = document.getElementById("watch").value;
+    var watchPrice = 300;
+
+    var tvQuantity = document.getElementById("tv").value;
+    var tvPrice = 2000;
+    const data = totaltranprice(laptopQuantity,laptopPrice,phoneQuantity,phonePrice,headphonesQuantity,headphonesPrice,watchQuantity,watchPrice,tvQuantity,tvPrice);
+
+    const total = data.total;
+    const items = data.items;
+    
+    document.getElementById("tt").value = parseInt(total);
+    document.getElementById("items").value = items;
+    }
+
+    function totaltranprice(laptopQuantity,laptopPrice,phoneQuantity,phonePrice,headphonesQuantity,headphonesPrice,watchQuantity, watchPrice,tvQuantity,tvPrice) {
+    var total = 0;
+    var items=0;
+ 
+    total += laptopQuantity * laptopPrice;
+    items += laptopQuantity*1;
+ 
+    total += phoneQuantity * phonePrice;
+    items += phoneQuantity*1;
+ 
+    total += headphonesQuantity * headphonesPrice;
+    items += headphonesQuantity*1;
+ 
+    total += watchQuantity * watchPrice;
+    items += watchQuantity*1;
+ 
+    total += tvQuantity * tvPrice;
+    items += tvQuantity*1;
+
+    return {total: total, items: items}
+
+  }
+
+function trandone(){
+          alert("Items Purchased Thank You");
+          closeForm(); 
+        }
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <table class="table table-bordered table-hover table-striped caption-top">
+      <caption><h1>Check Out</h1></caption>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Product ID</th>
+          <th>Quantity Owned </th>
+          <th>Current Price</th>
+          <th>Purchase</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Laptop</td>
+          <td>
+            1
+          </td>
+          <td><input type="number" id="msst" name="msst" value="0" disabled></td>
+          <td>1000$</td>
+          <td>
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#myModal"
+              onclick="openForm('1',1000)">
+              Order
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Phones</td>
+          <td>
+            2
+          </td>
+          <td><input type="number" id="apst" name="apst" value="0" disabled></td>
+          <td>500$</td>
+          <td>
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#myModal"
+              onclick="openForm('2',500)">
+              Order
+            </button>
+          </td>
+        </tr>
+        <tr>
+            <td>Head Phones</td>
+            <td>
+              3
+            </td>
+            <td><input type="number" id="head" name="head" value="0" disabled></td>
+            <td>100$</td>
+            <td>
+              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#myModal"
+                onclick="openForm('3',100)">
+                Order
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Smart Watch</td>
+            <td>
+              4
+            </td>
+            <td><input type="number" id="watch" name="watch" value="0" disabled ></td>
+            <td>300$</td>
+            <td>
+              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#myModal"
+                onclick="openForm('4',300)">
+                Order
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Smart TV</td>
+            <td>
+              5
+            </td>
+            <td><input type="number" id="tv" name="tv" value="0" disabled></td>
+            <td>2000$</td>
+            <td>
+              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#myModal"
+                onclick="openForm('5',2000)">
+                Order
+              </button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    <label for="items">Total number of items:</label>
+    <input type="number" id="items" name="items" disabled><br>
+
+    <label for="tt">Total Money invested $:</label>
+    <input type="number" id="tt" name="tt" disabled><br>
+    <br></br>
+    <button type="button" class="btn btn-outline-success" id="submitBtn" value="submit"
+    onclick="trandone()">Confirm Purchase</button>
+
+  </div>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <form>
+            <label for="account">Account #:</label>
+            <input type="text" id="account" name="account"><br>
+            <label for="ticker">Product ID:</label>
+            <input type="text" id="ticker" name="ticker" disabled><br>
+            <label for="ticker">Quantity:</label>
+            <input type="text" id="stocks" name="stocks" disabled><br>
+            <label for="inv">invested $:</label>
+            <input type="number" id="inv" name="inv" disabled><br>
+            <label for="cp">Current Price:</label>
+            <input type="text" id="cp" name="cp" disabled><br>
+            <label for="trade_type">Trade Type:</label>
+            <input type="radio" id="buy" name="trade_type" value="HTML" checked>
+            <label for="buy">BUY</label>
+            <input type="radio" id="sell" name="trade_type" value="HTML">
+            <label for="sell">SELL</label>
+            <br><br>
+            <label for="quantity">Quantity: </label>
+            <div class="container">
+              <input type="button" onclick="decrementValue()" class="button4" value="-" />
+              <input type="number" name="quantity" value="1" maxlength="5" max="10000" size="10" id="quantity"
+                placeholder="Enter The Quantity" min="1" onchange="calculateTotal()" />
+              <input type="button" onclick="incrementValue()" class="button5" value="+" />
+            </div>
+            <label for="total">Trade Value: </label>
+            <input type="number" id="total" name="total" disabled>
+            <br></br>
+            <button type="button" class="btn btn-outline-success" id="submitBtn" value="submit"
+              onclick="stocksowned();parameters();">Submit</button>
+
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
